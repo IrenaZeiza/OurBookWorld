@@ -5,4 +5,14 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'OurBookWorld' " />
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Classics.cshtml" />
+    <Content Remove="Views\Shared\Classics.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Classics.cshtml" />
+    <None Include="Views\Shared\Classics.cshtml" />
+  </ItemGroup>
 </Project>

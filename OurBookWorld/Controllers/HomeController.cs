@@ -28,6 +28,26 @@ namespace OurBookWorld.Controllers
             return View();
         }
 
+        public IActionResult Classics()
+        {
+            return View();
+        }
+
+        public IActionResult Bestsellers()
+        {
+            return View();
+        }
+
+        public IActionResult Science()
+        {
+            return View();
+        }
+
+        public IActionResult Retur()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
