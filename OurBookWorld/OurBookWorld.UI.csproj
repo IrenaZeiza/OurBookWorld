@@ -7,12 +7,28 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'OurBookWorld' " />
 
   <ItemGroup>
-    <Content Remove="Views\Home\Classics.cshtml" />
     <Content Remove="Views\Shared\Classics.cshtml" />
+    <Content Remove="Views\Classics\Classics.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Home\Classics.cshtml" />
+    <None Remove="Views\Classics\" />
+    <None Remove="Views\Bestsellers\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Views\Shared\Classics.cshtml" />
+    <None Include="Views\Classics\Classics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Classics\" />
+    <Folder Include="Views\Bestsellers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OurBookWorld.Entity\OurBookWorld.Entity.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\OurBookLibrary.BLL\OurBookWorld.BLL.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
