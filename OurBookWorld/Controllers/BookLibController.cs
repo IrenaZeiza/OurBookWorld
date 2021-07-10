@@ -8,10 +8,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OurBookWorld.UI.Controllers
 {
-    public class HomeController : Controller
+    public class BookLibController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
+        {
+            return View();
+        }
+
+
+        public IActionResult Classics()
+        {
+            return View();
+        }
+
+        public IActionResult Bestsellers()
+        {
+            return View();
+        }
+
+        public IActionResult Science()
+        {
+            return View();
+        }
+
+        public IActionResult Return()
         {
             return View();
         }
