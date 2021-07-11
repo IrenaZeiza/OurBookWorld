@@ -8,20 +8,15 @@
 
   <ItemGroup>
     <Content Remove="Views\Shared\Classics.cshtml" />
-    <Content Remove="Views\Classics\Classics.cshtml" />
+    <Content Remove="Views\BookLib\Classics.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Views\Classics\" />
-    <None Remove="Views\Bestsellers\" />
+    <None Remove="Views\BookLib\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Shared\Classics.cshtml" />
-    <None Include="Views\Classics\Classics.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Classics\" />
-    <Folder Include="Views\Bestsellers\" />
+    <None Include="Views\BookLib\Classics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OurBookWorld.Entity\OurBookWorld.Entity.csproj">
@@ -30,5 +25,8 @@
     <ProjectReference Include="..\OurBookLibrary.BLL\OurBookWorld.BLL.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\BookLib\" />
   </ItemGroup>
 </Project>
