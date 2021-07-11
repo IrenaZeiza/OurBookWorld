@@ -11,10 +11,7 @@ namespace OurBookWorld.UI.Controllers
     public class BookLibController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
+       
 
 
         public IActionResult Classics()

@@ -7,16 +7,7 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'OurBookWorld' " />
 
   <ItemGroup>
-    <Content Remove="Views\Shared\Classics.cshtml" />
-    <Content Remove="Views\BookLib\Classics.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Views\BookLib\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Views\Shared\Classics.cshtml" />
-    <None Include="Views\BookLib\Classics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OurBookWorld.Entity\OurBookWorld.Entity.csproj">
