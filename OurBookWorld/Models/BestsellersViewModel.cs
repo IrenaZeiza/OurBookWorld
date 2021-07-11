@@ -12,7 +12,9 @@ namespace OurBookWorld.UI.Models
 
         {
 
-        public string NameOfTheBook { get; set; }
+        public string KeywordOfTheBook { get; set; }
+
+        
 
 
         
