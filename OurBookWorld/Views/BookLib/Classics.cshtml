@@ -1,16 +1,43 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Classics";
 }
 
 
-    <div class=“text-center”>
-        <h1 class="display-4">Search your book here</h1>
+<div class=“text-center”>
+    <h1 class="display-4">Search your book here</h1>
 
-        <input type="text" name="bookKeyword" />
-        <br />
-        <input type="submit" value="Search" />
-        <br />
+    <input type="text" name="bookKeyword" />
+    <br />
+    <input type="submit" value="Search" />
+    <br />
 
 
-    </div>
-    <!DOCTYPE html>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+            </tr>
+        }
+    </table>
+
+
+</div>
+<!DOCTYPE html>
