@@ -1,0 +1,56 @@
+﻿@model List<BookViewModel>
+@{
+    ViewData["Title"] = "Classics";
+}
+
+@{
+
+    foreach (var item in Model)
+    {
+        <p>
+           @item.Name
+        </p><br/>
+    }
+
+    
+}
+
+
+
+@*< div class=“text-center”>
+    <h1 class="display-4">Search your book here</h1>
+
+    <input type = "text" name= "bookKeyword" />
+    < br />
+    < input type= "submit" value= "Search" />
+    < br />< input id= "Button1" type= "button" value= "button" />
+
+
+
+    < table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        < tr >
+            < td >
+                @Html.DisplayFor(modelItem => item.Name)
+            </ td >
+            < td >
+                @Html.DisplayFor(modelItem => item.Surname)
+            </ td >
+        </ tr >
+    }
+    </table>
+
+
+    </div>
+    <!DOCTYPE html>*@

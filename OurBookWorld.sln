@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.UI", "OurBookWorld\OurBookWorld.UI.csproj", "{CB825A94-E0D5-48CD-9341-7ABDC058A9E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.UI_1", "OurBookWorld\OurBookWorld.UI_1.csproj", "{CB825A94-E0D5-48CD-9341-7ABDC058A9E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.BLL", "OurBookLibrary.BLL\OurBookWorld.BLL.csproj", "{B6759CDF-7C3E-4EE1-8CEC-B6E6F0762562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.BLL", "OurBookLibrary.BLL\OurBookWorld.BLL.csproj", "{B6759CDF-7C3E-4EE1-8CEC-B6E6F0762562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.DAL", "OurBookWorld.DAL\OurBookWorld.DAL.csproj", "{BC8693F7-1B4A-45FE-A367-9B18A024892F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.DAL", "OurBookWorld.DAL\OurBookWorld.DAL.csproj", "{BC8693F7-1B4A-45FE-A367-9B18A024892F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.Entity", "OurBookWorld.Entity\OurBookWorld.Entity.csproj", "{B7CB6B96-32BA-4613-AC72-5B00D5657854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.Entity", "OurBookWorld.Entity\OurBookWorld.Entity.csproj", "{B7CB6B96-32BA-4613-AC72-5B00D5657854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.UI", "OurBookWorld.UI\OurBookWorld.UI.csproj", "{37B2D86A-77D5-460F-A0E5-438712E0B847}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B7CB6B96-32BA-4613-AC72-5B00D5657854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CB6B96-32BA-4613-AC72-5B00D5657854}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CB6B96-32BA-4613-AC72-5B00D5657854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B2D86A-77D5-460F-A0E5-438712E0B847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B2D86A-77D5-460F-A0E5-438712E0B847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B2D86A-77D5-460F-A0E5-438712E0B847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B2D86A-77D5-460F-A0E5-438712E0B847}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
