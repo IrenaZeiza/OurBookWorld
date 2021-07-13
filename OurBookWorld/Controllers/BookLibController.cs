@@ -17,19 +17,17 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Classics()
         {
-            return View();
+            BookViewModel bookModel = new BookViewModel()
+            {
+                Id = 1,
+                Name = "War and Peace",
+                Author = "Tolstoy",
+                Type = "Classic"
+            };
 
-
+            return View(bookModel);
 
         }
-
-        BookViewModel bookModel = new BookViewModel()
-        {
-            Id = 1,
-            Name = "War and Peace",
-            Author = "Tolstoy"
-        };
-            return View(BookViewModel);
 
         public IActionResult Bestsellers()
         {
