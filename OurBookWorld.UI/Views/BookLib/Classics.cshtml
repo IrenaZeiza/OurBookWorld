@@ -3,17 +3,34 @@
     ViewData["Title"] = "Classics";
 }
 
+<div class=“text-center”>
+    <h1 class="display-8">Search your Classic Book here</h1>
+
+    @*<input type="text" name="bookKeyword" />
+        <br />
+        <input type="submit" value="Search" />
+        <br />*@
+
+
+</div>
+<!DOCTYPE html>
+
 @{
 
     foreach (var item in Model)
     {
         <p>
-           @item.Name
-        </p><br/>
+            @item.Id @item.Author @item.Name
+
+
+        </p>
+        <br />
     }
 
-    
+
 }
+
+
 
 
 

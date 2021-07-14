@@ -1,20 +1,36 @@
-﻿
+﻿@model List<BookViewModel>
 
 @{
     ViewData["Title"] = "Bestsellers";
 }
 
 <div class=“text-center”>
-    <h1 class="display-4">Search your Bestseller here</h1>
+    <h1 class="display-8">Search your Bestseller here</h1>
 
-    <input type="text" name="bookKeyword" />
-    <br />
-    <input type="submit" value="Search" />
-    <br />
-    
- 
+    @*<input type="text" name="bookKeyword" />
+        <br />
+        <input type="submit" value="Search" />
+        <br />*@
+
+
 </div>
 <!DOCTYPE html>
+
+
+@{
+
+    foreach (var item in Model)
+    {
+        <p>
+            @item.Id @item.Author @item.Name
+
+
+        </p>
+        <br />
+    }
+}
+
+
 
 
 
