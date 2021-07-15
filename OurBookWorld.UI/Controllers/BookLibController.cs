@@ -21,7 +21,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel = new BookViewModel()
             {
-                Id = "1.1",
+                Id = "11",
                 Name = " <<War and Peace>> ",
                 Author = "Tolstoy, Lev",
                 Type = "Classic"
@@ -51,10 +51,18 @@ namespace OurBookWorld.UI.Controllers
                 Type = "Classic"
             };
 
+            BookViewModel bookModel4 = new BookViewModel()
+            {
+                Id = "1.5",
+                Name = "<<The Great Gatsby>>",
+                Author = "Fitzgerald, F.Scott",
+                Type = "Classic"
+            };
             BookList.Add(bookModel);
             BookList.Add(bookModel1);
             BookList.Add(bookModel2);
             BookList.Add(bookModel3);
+            BookList.Add(bookModel4);
 
             return View(BookList);
 
