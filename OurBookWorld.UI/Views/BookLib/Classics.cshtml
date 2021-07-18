@@ -22,35 +22,104 @@
         <p>
             @item.Id @item.Author @item.Name
 
-            <h1 class="display-20">Enter Your name and surname</h1>
+          
 
-            <input type="text" name="bookKeyword" />
+            @*<input type="text" name="bookKeyword" />
             <br />
             <input type="submit" value="Take your book" />
-            <br />
+            <br />*@
 
         </p>
         <br />
 
-        @using (Html.BeginForm("UserContacts", "Controller"))
+        @*@using (Html.BeginForm("Controller"))
         {
             <input type="hidden" id="TextBox1" name="TextBox1" value="YourData" />
             <input type="submit" value="Take your book" />
 
             <input type="text" name="Yourname and surname" />
             <br />
-        }
-        using (Html.BeginForm("GetAnimalInfo", "AnimalEngine", FormMethod.Post))
-        {
-            <input type="text" name="animalName" />
-            <br />
-            <input type="submit" value="send to the controller" />
-            <br />
-        }
+        }*@
 
-        <li class="nav-item">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+            Take Your Book
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Enter your contacts</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <form>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPhonenumber">Phone number</label>
+                            <input type="text" class="form-control" id="inputPhonenumber" placeholder="+371...">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*<li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="UserContacts">UserContacts</a>
-        </li>
+        </li>*@
 
     }
     @*<div class=“text-center”>

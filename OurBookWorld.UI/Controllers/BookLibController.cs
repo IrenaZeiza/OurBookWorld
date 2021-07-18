@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OurBookWorld.UI.Models;
@@ -12,7 +13,7 @@ namespace OurBookWorld.UI.Controllers
     public class BookLibController : Controller
     {
         // GET: /<controller>/
-       
+
 
 
         public IActionResult Classics()
@@ -25,15 +26,15 @@ namespace OurBookWorld.UI.Controllers
                 Name = " <<War and Peace>> ",
                 Author = "Tolstoy, Lev",
                 Type = "Classic"
-            }; 
+            };
             BookViewModel bookModel1 = new BookViewModel()
             {
                 Id = 12,
                 Name = "<<Animal Farm>>",
                 Author = "Orwell, George",
                 Type = "Classic"
-            }; 
-            
+            };
+
             BookViewModel bookModel2 = new BookViewModel()
             {
                 Id = 13,
@@ -114,7 +115,7 @@ namespace OurBookWorld.UI.Controllers
             return View(BookList);
 
 
-            
+
         }
 
         public IActionResult Science()
@@ -133,7 +134,7 @@ namespace OurBookWorld.UI.Controllers
                 Id = 32,
                 Name = "<<Research on Radioactive Substances>>",
                 Author = "Curie, Marie",
-          
+
                 Type = "Science"
             };
 
@@ -164,7 +165,7 @@ namespace OurBookWorld.UI.Controllers
 
 
         }
-    
+
 
         public IActionResult Return()
         {
@@ -186,9 +187,44 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-        public IActionResult UserContacts()
-        {
-            return View();
-        }
     }
 }
+
+
+
+//        [HttpPost]
+//        [ValidateAntiForgeryToken]
+
+//        public async Task<ActionResult> UserContacts(ContactModel model)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                var mail = new ContactModel();
+
+
+//                mail.UserEmail = string.Format("<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>", model.UserName, mail.UserEmail, model.UserPhoneNumber);
+
+//                using (var smtp = new SmtpClient())
+//                {
+
+//                    return RedirectToAction("SuccessMessage");
+//                }
+//            }
+//            return View(model);
+//        }
+//    }
+//}
+       
+
+//            public ActionResult SuccessMessage()
+//            {
+//                return View();
+//            }
+        
+//    }
+//}
+//public string UserName { get; set; }
+
+//public string UserEmail { get; set; }
+
+//public string UserPhoneNumber { get; set; }
