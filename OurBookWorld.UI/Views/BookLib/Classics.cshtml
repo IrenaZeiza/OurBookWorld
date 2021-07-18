@@ -22,11 +22,48 @@
         <p>
             @item.Id @item.Author @item.Name
 
+            <h1 class="display-20">Enter Your name and surname</h1>
+
+            <input type="text" name="bookKeyword" />
+            <br />
+            <input type="submit" value="Take your book" />
+            <br />
 
         </p>
         <br />
-    }
 
+        @using (Html.BeginForm("UserContacts", "Controller"))
+        {
+            <input type="hidden" id="TextBox1" name="TextBox1" value="YourData" />
+            <input type="submit" value="Take your book" />
+
+            <input type="text" name="Yourname and surname" />
+            <br />
+        }
+        using (Html.BeginForm("GetAnimalInfo", "AnimalEngine", FormMethod.Post))
+        {
+            <input type="text" name="animalName" />
+            <br />
+            <input type="submit" value="send to the controller" />
+            <br />
+        }
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="UserContacts">UserContacts</a>
+        </li>
+
+    }
+    @*<div class=“text-center”>
+            <h1 class="display-4">Take your book here</h1>
+
+            <input type="text" name="bookKeyword" />
+            <br />
+            <input type="submit" value="Take" />
+            <br />
+
+
+        </div>
+        <!DOCTYPE html>*@
 
 }
 

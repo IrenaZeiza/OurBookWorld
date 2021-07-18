@@ -21,14 +21,14 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel = new BookViewModel()
             {
-                Id = "11",
+                Id = 11,
                 Name = " <<War and Peace>> ",
                 Author = "Tolstoy, Lev",
                 Type = "Classic"
             }; 
             BookViewModel bookModel1 = new BookViewModel()
             {
-                Id = "1.2",
+                Id = 12,
                 Name = "<<Animal Farm>>",
                 Author = "Orwell, George",
                 Type = "Classic"
@@ -36,7 +36,7 @@ namespace OurBookWorld.UI.Controllers
             
             BookViewModel bookModel2 = new BookViewModel()
             {
-                Id = "1.3",
+                Id = 13,
                 Name = "<<Gone with the Winds>>",
                 Author = "Mitchell, Margaret",
                 Type = "Classic"
@@ -45,7 +45,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel3 = new BookViewModel()
             {
-                Id = "1.4",
+                Id = 14,
                 Name = "<<The Great Gatsby>>",
                 Author = "Fitzgerald, F.Scott",
                 Type = "Classic"
@@ -53,9 +53,9 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel4 = new BookViewModel()
             {
-                Id = "1.5",
-                Name = "<<The Great Gatsby>>",
-                Author = "Fitzgerald, F.Scott",
+                Id = 15,
+                Name = "<<The Adventures of Tom Sawyer >>",
+                Author = "Twain, Mark",
                 Type = "Classic"
             };
             BookList.Add(bookModel);
@@ -76,14 +76,14 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel = new BookViewModel()
             {
-                Id = "2.1",
+                Id = 21,
                 Name = " <<Harry Potter>> ",
                 Author = "Rowling, Joanne",
                 Type = "Bestseller"
             };
             BookViewModel bookModel1 = new BookViewModel()
             {
-                Id = "2.2",
+                Id = 22,
                 Name = "<<Twilight>>",
                 Author = "Meyer, Stephenie",
                 Type = "Bestseller"
@@ -91,7 +91,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel2 = new BookViewModel()
             {
-                Id = "2.3",
+                Id = 23,
                 Name = "<<The Hunger Games>>",
                 Author = "Mitchell, Margaret",
                 Type = "Bestseller"
@@ -100,7 +100,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel3 = new BookViewModel()
             {
-                Id = "2.4",
+                Id = 24,
                 Name = "<<The Lord of the Rings>>",
                 Author = "Tolkien, J. R. R.",
                 Type = "Bestseller"
@@ -123,14 +123,14 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel = new BookViewModel()
             {
-                Id = "3.1",
+                Id = 31,
                 Name = " <<On the Generalized Theory of Gravitation>> ",
                 Author = "Einstein, Albert",
                 Type = "Science"
             };
             BookViewModel bookModel1 = new BookViewModel()
             {
-                Id = "3.2",
+                Id = 32,
                 Name = "<<Research on Radioactive Substances>>",
                 Author = "Curie, Marie",
           
@@ -139,7 +139,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel2 = new BookViewModel()
             {
-                Id = "3.3",
+                Id = 33,
                 Name = "<<On the Origin of Species>>",
                 Author = "Darwin, Charles",
                 Type = "Science"
@@ -148,7 +148,7 @@ namespace OurBookWorld.UI.Controllers
 
             BookViewModel bookModel3 = new BookViewModel()
             {
-                Id = "3.4",
+                Id = 34,
                 Name = "<<Atlas of Human Anatomy>>",
                 Author = "Sinelnikov,R.D.",
                 Type = "Science"
@@ -179,5 +179,16 @@ namespace OurBookWorld.UI.Controllers
         //};
 
         //send here list of the books
+
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult UserContacts()
+        {
+            return View();
+        }
     }
 }
