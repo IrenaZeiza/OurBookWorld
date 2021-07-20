@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\OurBookWorld.Entity\OurBookWorld.Entity.csproj" />
+    <ProjectReference Include="..\OurBookWorld.UI\OurBookWorld.UI.csproj" />
   </ItemGroup>
 </Project>

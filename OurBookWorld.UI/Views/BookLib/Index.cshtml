@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "List of the Books";
+}
+<div class=“text-center”>
+    <h1 class="display-4">Welcome to our book World!</h1>
+    <p>Choose what you love!</p>
+</div>
+<!DOCTYPE html>
+<html>
+<body>
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="Classics">Classics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="Bestsellers">Bestsellers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="Science">Science</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="BookLib" asp-action="Return">Return</a>
+        </li>
+
+    
+    </ul>
+</body>
+</html>
