@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OurBookWorld.UI.Context;
 using OurBookWorld.UI.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -184,8 +185,22 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var book = new BookViewModel();
+
+            book.Author = "Tolstoy, Leo";
+            book.Name = "<<War And Peace>>";
+            book.Type = "Classic";
+
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(book);
+                context.SaveChanges();
+                var books = context.Books.ToList();
+            }
+                return View();
         }
+
+        
 
     }
 }
