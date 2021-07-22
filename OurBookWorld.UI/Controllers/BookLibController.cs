@@ -19,6 +19,19 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Classics()
         {
+            var book = new BookViewModel();
+
+            book.Author = "Tolstoy, Leo";
+            book.Name = "<<War And Peace>>";
+            book.Type = "Classic";
+
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(book);
+                context.SaveChanges();
+                var books = context.Books.ToList();
+            }
+
             List<BookViewModel> BookList = new List<BookViewModel>();
 
             BookViewModel bookModel = new BookViewModel()
@@ -74,6 +87,18 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Bestsellers()
         {
+            var book = new BookViewModel();
+
+            book.Author = "Rowling, Joanne";
+            book.Name = "<<Harry Potter>>";
+            book.Type = "Bestseller";
+
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(book);
+                context.SaveChanges();
+                var books = context.Books.ToList();
+            }
             List<BookViewModel> BookList = new List<BookViewModel>();
 
             BookViewModel bookModel = new BookViewModel()
@@ -122,6 +147,19 @@ namespace OurBookWorld.UI.Controllers
         public IActionResult Science()
         {
             List<BookViewModel> BookList = new List<BookViewModel>();
+
+            var book = new BookViewModel();
+
+            book.Author = "Einstein, Albert";
+            book.Name = "<<On the Generalized Theory of Gravitation>>";
+            book.Type = "Science";
+
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(book);
+                context.SaveChanges();
+                var books = context.Books.ToList();
+            }
 
             BookViewModel bookModel = new BookViewModel()
             {
@@ -173,14 +211,7 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-        //List<BookViewModel> ClassicBook = new List<BookViewModel>
-        //{
-        //new BookViewModel() {Name = "Master and Margharita", Id = 1, Author = "Bulgakov"},
-        //new BookViewModel() {Name = "Romeo & Julieta", Id = 2, Author = "Shakespeare"},
-        //new BookViewModel() {Name = "War and Peace", Id = 3, Author = "Tolstoy"}
-        //};
-
-        //send here list of the books
+    
 
 
         public IActionResult Index()
@@ -197,7 +228,8 @@ namespace OurBookWorld.UI.Controllers
                 context.SaveChanges();
                 var books = context.Books.ToList();
             }
-                return View();
+
+            return View();
         }
 
         
@@ -206,40 +238,3 @@ namespace OurBookWorld.UI.Controllers
 }
 
 
-
-//        [HttpPost]
-//        [ValidateAntiForgeryToken]
-
-//        public async Task<ActionResult> UserContacts(ContactModel model)
-//        {
-//            if (ModelState.IsValid)
-//            {
-//                var mail = new ContactModel();
-
-
-//                mail.UserEmail = string.Format("<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>", model.UserName, mail.UserEmail, model.UserPhoneNumber);
-
-//                using (var smtp = new SmtpClient())
-//                {
-
-//                    return RedirectToAction("SuccessMessage");
-//                }
-//            }
-//            return View(model);
-//        }
-//    }
-//}
-       
-
-//            public ActionResult SuccessMessage()
-//            {
-//                return View();
-//            }
-        
-//    }
-//}
-//public string UserName { get; set; }
-
-//public string UserEmail { get; set; }
-
-//public string UserPhoneNumber { get; set; }

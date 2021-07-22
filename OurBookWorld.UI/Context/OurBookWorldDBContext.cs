@@ -15,9 +15,10 @@ namespace OurBookWorld.UI.Context
         {
             get; set;
         }
+     
+      
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-           => options.UseSqlite($"Data Source= OurBookLibraryDatabase.db");
-
-
+          => options.UseSqlite($"Data Source= OurBookLibraryDatabase.db");
     }
 }

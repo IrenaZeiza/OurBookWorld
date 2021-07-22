@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.810.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.DAL", "OurBookWorld.DAL\OurBookWorld.DAL.csproj", "{BC8693F7-1B4A-45FE-A367-9B18A024892F}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "OurBookWorld.UI_1", "OurBookWorld\OurBookWorld.UI_1.csproj", "{D18F1D55-C590-401D-9619-6C5BF7B1B2A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.UI_1", "OurBookWorld\OurBookWorld.UI_1.csproj", "{D18F1D55-C590-401D-9619-6C5BF7B1B2A4}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "OurBookWorld.BLL", "OurBookLibrary.BLL\OurBookWorld.BLL.csproj", "{3DBFF3F9-34B2-4787-8348-A6D8FAE1C9B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.BLL", "OurBookLibrary.BLL\OurBookWorld.BLL.csproj", "{3DBFF3F9-34B2-4787-8348-A6D8FAE1C9B6}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "OurBookWorld.Entity", "OurBookWorld.Entity\OurBookWorld.Entity.csproj", "{7674B5B0-4F3D-42F5-B628-93ABBDC71D7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.Entity", "OurBookWorld.Entity\OurBookWorld.Entity.csproj", "{7674B5B0-4F3D-42F5-B628-93ABBDC71D7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.UI", "OurBookWorld.UI\OurBookWorld.UI.csproj", "{72B856C2-5089-47BA-B481-4ADAACC524FE}"
 EndProject

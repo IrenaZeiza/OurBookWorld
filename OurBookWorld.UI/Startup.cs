@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OurBookWorld.UI.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,7 @@ namespace OurBookWorld.UI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -51,7 +53,13 @@ namespace OurBookWorld.UI
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=BookLib}/{action=Index}");
-            });
+
+
+                 });
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Database.EnsureCreated();
+            }
         }
     }
 }

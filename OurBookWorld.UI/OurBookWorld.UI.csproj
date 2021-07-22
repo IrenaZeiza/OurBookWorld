@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <None Remove="MsBuild.NuGet.Pack" />
+    <None Remove="OurBookLibraryDatabase.sqbpro" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
@@ -16,5 +17,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\OurBookLibraryDatabase.db" />
   </ItemGroup>
 </Project>
