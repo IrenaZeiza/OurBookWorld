@@ -19,6 +19,6 @@
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\net5.0\OurBookLibraryDatabase.db" />
+    <Folder Include="bin\Debug\net5.0\" />
   </ItemGroup>
 </Project>

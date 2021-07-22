@@ -81,8 +81,6 @@ namespace OurBookWorld.UI.Controllers
 
             return View(BookList);
 
-
-
         }
 
         public IActionResult Bestsellers()
