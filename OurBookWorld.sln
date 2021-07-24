@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.810.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurBookWorld.DAL", "OurBookWorld.DAL\OurBookWorld.DAL.csproj", "{BC8693F7-1B4A-45FE-A367-9B18A024892F}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "OurBookWorld.UI_1", "OurBookWorld\OurBookWorld.UI_1.csproj", "{B6A7CCB9-769D-4D32-B5C8-C6D741E5F21F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.UI_1", "OurBookWorld\OurBookWorld.UI_1.csproj", "{B6A7CCB9-769D-4D32-B5C8-C6D741E5F21F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBookWorld.BLL", "OurBookLibrary.BLL\OurBookWorld.BLL.csproj", "{B8DD25DA-087E-45F5-8E90-617B95F0188E}"
 EndProject

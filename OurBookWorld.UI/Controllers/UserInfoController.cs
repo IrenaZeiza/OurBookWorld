@@ -33,5 +33,9 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
+        UserContactsViewModel userContactsView = new UserContactsViewModel();
+
+   
+
     }
 }
