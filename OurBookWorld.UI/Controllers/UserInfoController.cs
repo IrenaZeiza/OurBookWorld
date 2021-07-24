@@ -1,4 +1,6 @@
 ﻿    using Microsoft.AspNetCore.Mvc;
+using OurBookWorld.UI.Context;
+using OurBookWorld.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,24 @@ namespace OurBookWorld.UI.Controllers
     {
         public IActionResult UserContacts()
         {
+            return View();
+
+            var user = new UserContactsViewModel();
+
+            user.UserNumber = 11;
+            user.Name = "<<...>>";
+            user.Surname = "Classic";
+            user.Email = "email";
+
+            user.PhoneNumber = 11;
+
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(user);
+                context.SaveChanges();
+                var users = context.Users.ToList();
+            }
+
             return View();
         }
 

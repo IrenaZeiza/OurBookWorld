@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
@@ -19,18 +20,8 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Classics()
         {
-            var book = new BookViewModel();
+         
 
-            book.Author = "Tolstoy, Leo";
-            book.Name = "<<War And Peace>>";
-            book.Type = "Classic";
-
-            using (var context = new OurBookWorldDBContext())
-            {
-                context.Add(book);
-                context.SaveChanges();
-                var books = context.Books.ToList();
-            }
 
             List<BookViewModel> BookList = new List<BookViewModel>();
 
@@ -97,6 +88,8 @@ namespace OurBookWorld.UI.Controllers
                 context.SaveChanges();
                 var books = context.Books.ToList();
             }
+
+
             List<BookViewModel> BookList = new List<BookViewModel>();
 
             BookViewModel bookModel = new BookViewModel()
@@ -209,7 +202,7 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-    
+
 
 
         public IActionResult Index()
@@ -230,9 +223,61 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-        
+        public List<BookViewModel> BookList { get; set; }
+        public void Connect()
+        {
+            var book = new BookViewModel();
 
+            string cs = "Data Source=" + Environment.CurrentDirectory + "\\.db";
+            using (var connection = new SQLiteConnection(cs))
+            {
+                var listOfMovies = new List<BookViewModel>();
+                var stm = "SELECT * from Books";
+                var command = new SQLiteCommand(stm, connection);
+               
+        
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        using (var context = new OurBookWorldDBContext())
+                        {
+                            context.Add(book);
+                            context.SaveChanges();
+                            var books = context.Books.ToList();
+                        }
+
+
+
+
+                    }
+
+
+                  
+
+                
+
+
+
+
+            }
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

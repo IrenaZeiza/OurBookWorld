@@ -9,7 +9,10 @@ namespace OurBookWorld.UI.Models
     public class UserContactsViewModel
     {
         [Key]
-        public int Id { get; set; }
-
+        public int UserNumber { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
+        public int PhoneNumber { get; set; }
     }
 }

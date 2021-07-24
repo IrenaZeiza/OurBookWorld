@@ -21,4 +21,7 @@
   <ItemGroup>
     <Folder Include="bin\Debug\net5.0\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\OurBookLibraryDatabase.db" />
+  </ItemGroup>
 </Project>
