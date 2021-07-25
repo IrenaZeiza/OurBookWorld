@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using OurBookWorld.UI.Context;
 using OurBookWorld.UI.Models;
 
@@ -73,37 +74,13 @@ namespace OurBookWorld.UI.Controllers
             return View(BookList);
 
 
-            //UserContactsViewModel userContactsView  = new UserContactsViewModel()
-
-            //if (sucess)
-
-            //{
-            //    return view("Book Reserved", UserContactsViewModel);
-
-            //}
-            //else
-            //{
-            //    return View("Login failure")
-
-            //            }
         }
 
 
 
         public IActionResult Bestsellers()
         {
-            var book = new BookViewModel();
-
-            book.Author = "Rowling, Joanne";
-            book.Name = "<<Harry Potter>>";
-            book.Type = "Bestseller";
-
-            using (var context = new OurBookWorldDBContext())
-            {
-                context.Add(book);
-                context.SaveChanges();
-                var books = context.Books.ToList();
-            }
+            
 
 
             List<BookViewModel> BookList = new List<BookViewModel>();
@@ -155,18 +132,7 @@ namespace OurBookWorld.UI.Controllers
         {
             List<BookViewModel> BookList = new List<BookViewModel>();
 
-            var book = new BookViewModel();
-
-            book.Author = "Einstein, Albert";
-            book.Name = "<<On the Generalized Theory of Gravitation>>";
-            book.Type = "Science";
-
-            using (var context = new OurBookWorldDBContext())
-            {
-                context.Add(book);
-                context.SaveChanges();
-                var books = context.Books.ToList();
-            }
+       
 
             BookViewModel bookModel = new BookViewModel()
             {
@@ -201,10 +167,18 @@ namespace OurBookWorld.UI.Controllers
                 Type = "Science"
             };
 
+            BookViewModel bookModel4 = new BookViewModel()
+            {
+                Id = 34,
+                Name = "<<Atlas of Human Anatomy>>",
+                Author = "Sinelnikov,R.D.",
+                Type = "Science"
+            };
             BookList.Add(bookModel);
             BookList.Add(bookModel1);
             BookList.Add(bookModel2);
             BookList.Add(bookModel3);
+            BookList.Add(bookModel4);
 
             return View(BookList);
 
@@ -215,9 +189,12 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Return()
         {
-            return View();
+  
+
+               return View();
         }
 
+       
 
 
 

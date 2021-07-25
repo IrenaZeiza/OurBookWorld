@@ -1,4 +1,4 @@
-﻿@model UserContactsViewModel
+﻿@model ErrorViewModel
 
 @{
     ViewData["Title"] = "Return";
@@ -14,20 +14,23 @@
 
     @{
 
-        @*if (OK, <Br)
-        {             // we need to return here 
 
 
 
-        }
 
-        else
-
+        @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
         {
+            <div class="alert alert-danger error-message" role="alert">
+                @Model.ErrorMessage
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.SucessMessage))
+        {
+            <div class="alert alert-success error-message" role="alert">
+                @Model.SucessMessage
+            </div>
+        }*@
 
-            
-
-         }*@
 
 
     }
@@ -39,4 +42,4 @@
 
 
 </div>
-<!DOCTYPE html>
+            <!DOCTYPE html>
