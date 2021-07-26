@@ -448,24 +448,11 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Return()
         {
+            ErrorViewModel error = new ErrorViewModel();
 
-           
+            error.SucessMessage = "You book has been returned!";
 
-        //    if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        //    {
-        //        @Model.ErrorMessage
-
-
-        //    }
-        //    if (!string.IsNullOrEmpty(Model.SucessMessage))
-        //    {
-
-        //        @Model.SuccessMessage
-
-
-        //}
-
-            return View();
+            return View(error);
         }
 
 
