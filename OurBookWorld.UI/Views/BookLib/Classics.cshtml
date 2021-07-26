@@ -52,52 +52,63 @@
                     </div>
 
                     <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name">
+
+                        @using (Html.BeginForm("SaveUserDetails", "UserInfo", FormMethod.Post))
+                        {
+                            <input type="text" name="animalName" /><br />
+                            <input type="submit" value="send to the controller" /><br />
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input name="Name" type="text" class="form-control" placeholder="First name">
+                                    </div>
+                                    <div class="col">
+                                        <input name="Surname" type="text" class="form-control" placeholder="Last name">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name">
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+
+                                        <input name="Email" type="email" class="form-control" id="inputEmail4" placeholder="Your email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input name="UserNumber" type="text" class="form-control" id="inputNumber4" placeholder="User Number">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <form>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
+                                <div class="form-group">
 
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Your email">
-                            </div>
-                            <div class="form-group col-md-6">
+                                    <input name="PhoneNumber" type="text" class="form-control" id="inputPhonenumber" placeholder="Phone number">
 
-                                <input type="text" class="form-control" id="inputNumber4" placeholder="User Number">
-                            </div>
-                        </div>
+                                </div>
 
-                        <div class="form-group">
-
-                            <input type="text" class="form-control" id="inputPhonenumber" placeholder="Phone number">
-
-                        </div>
-
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Ok</button>
-                        <br />
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Ok</button>
+                                    <br />
 
 
 
-                        <div class="alert alert-primary" role="alert">
-                            You can take your book now!
-                        </div>
+                                    <div class="alert alert-primary" role="alert">
+                                     You can take your book now!
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        }
 
                     </div>
+
+
                 </div>
             </div>
         </div>
 
-        }
     }
+}

@@ -32,10 +32,26 @@ namespace OurBookWorld.UI.Controllers
 
             return View();
         }
+        [HttpPost]
+        public void SaveUserDetails( int UserNumber, string Name, string Surname, string Email)
+        {
+            UserContactsViewModel userContacts = new UserContactsViewModel();
 
-        UserContactsViewModel userContactsView = new UserContactsViewModel();
+            userContacts.UserNumber = UserNumber;
+            userContacts.Name = Name;
+            userContacts.Surname = Surname;
+            userContacts.Email = Email;
 
-   
+            using (var context = new OurBookWorldDBContext())
+            {
+                context.Add(userContacts);
+                context.SaveChanges();
+
+                UserContactsViewModel user = new UserContactsViewModel();
+                user = context.Users.FirstOrDefault();
+            }
+
+        }
 
     }
 }
