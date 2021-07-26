@@ -21,9 +21,11 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Classics()
         {
-         
+
+           
 
 
+            
             List<BookViewModel> BookList = new List<BookViewModel>();
 
             BookViewModel bookModel = new BookViewModel()
@@ -155,6 +157,7 @@ namespace OurBookWorld.UI.Controllers
             BookList.Add(bookModel14);
 
             return View(BookList);
+
 
 
         }
@@ -485,28 +488,29 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-        public List<BookViewModel> BookList { get; set; }
-        public void Connect()
-        {
-            var book = new BookViewModel();
+        //public List<BookViewModel> Books { get; set; }
 
-            string cs = "Data Source=" + Environment.CurrentDirectory + "\\.db";
-            using (var connection = new SQLiteConnection(cs))
-            {
-                var listOfMovies = new List<BookViewModel>();
-                var stm = "SELECT * from Books";
-                var command = new SQLiteCommand(stm, connection);
+        //public void Connect()
+        //{
+        //    var book = new BookViewModel();
+
+        //    string cs = "Data Source=" + Environment.CurrentDirectory + "\\.db";
+        //    using (var connection = new SQLiteConnection(cs))
+        //    {
+        //        var listOfMovies = new List<BookViewModel>();
+        //        var stm = "SELECT * from Books";
+        //        var command = new SQLiteCommand(stm, connection);
                
         
-                    var reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        using (var context = new OurBookWorldDBContext())
-                        {
-                            context.Add(book);
-                            context.SaveChanges();
-                            var books = context.Books.ToList();
-                        }
+        //            var reader = command.ExecuteReader();
+        //            while (reader.Read())
+        //            {
+        //                using (var context = new OurBookWorldDBContext())
+        //                {
+        //                    context.Add(book);
+        //                    context.SaveChanges();
+        //                    var books = context.Books.ToList();
+        //                }
 
 
 
@@ -523,9 +527,9 @@ namespace OurBookWorld.UI.Controllers
 
             }
 
-        }
-    }
-}
+        
+    
+
 
 
 
