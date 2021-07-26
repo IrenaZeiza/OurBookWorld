@@ -19,75 +19,98 @@
 
 @{
 
-    foreach (var item in Model)
-    {
-        <p>
-            @item.Id @item.Author @item.Name
+
+        foreach (var item in Model)
+        {
+            <p>
+                @item.Id @item.Author @item.Name
 
 
-        </p>
-        <br />
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-            Take Your Book
-        </button>
 
-        <!-- Modal -->
+                @*<input type="text" name="bookKeyword" />
+                    <br />
+                    <input type="submit" value="Take your book" />
+                    <br />*@
 
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Enter your contacts</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            </p>
+            <br />
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                Take Your Book
+            </button>
+
+            <!-- Modal -->
+
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Enter your contacts</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            @using (Html.BeginForm("SaveUserDetails", "UserInfo", FormMethod.Post))
+                            {
+
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input name="Name" type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                        <div class="col">
+                                            <input name="Surname" type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+
+                                            <input name="Email" type="email" class="form-control" id="inputEmail4" placeholder="Your email">
+                                        </div>
+                                        <div class="form-group col-md-6">
+
+                                            <input name="UserNumber" type="text" class="form-control" id="inputNumber4" placeholder="User Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <input name="PhoneNumber" type="text" class="form-control" id="inputPhonenumber" placeholder="Phone number">
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Ok</button>
+                                        <br />
+
+
+
+                                        <div class="alert alert-primary" role="alert">
+                                            You can take your book now!
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                            }
+
+                        </div>
+
+
                     </div>
-
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <form>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Your email">
-                            </div>
-                            <div class="form-group col-md-6">
-
-                                <input type="text" class="form-control" id="inputNumber4" placeholder="User Number">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                            <input type="text" class="form-control" id="inputPhonenumber" placeholder="Phone number">
-
-                        </div>
-
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Ok</button>
-
-                        <div class="alert alert-primary" role="alert">
-                            You can take your book now!
-                        </div>
-
-                        </div>
-                    </div>
+                </div>
             </div>
-        </div>
 
+        }
     }
 }
 

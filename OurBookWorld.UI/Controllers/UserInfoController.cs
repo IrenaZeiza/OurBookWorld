@@ -12,9 +12,10 @@ namespace OurBookWorld.UI.Controllers
     {
         public IActionResult UserContacts()
         {
-            return View();
+            
 
             var user = new UserContactsViewModel();
+
 
             user.UserNumber = 11;
             user.Name = "<<...>>";
