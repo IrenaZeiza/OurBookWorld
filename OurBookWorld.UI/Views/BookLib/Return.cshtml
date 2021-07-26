@@ -19,17 +19,20 @@
 
 
         @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        {
-            <div class="alert alert-danger error-message" role="alert">
-                @Model.ErrorMessage
-            </div>
-        }
-        @if (!string.IsNullOrEmpty(Model.SucessMessage))
-        {
-            <div class="alert alert-success error-message" role="alert">
-                @Model.SucessMessage
-            </div>
-        }*@
+            {
+<div class="alert alert-danger error-message" role="alert">
+    @Model.ErrorMessage
+    <div class="alert alert-primary" role="alert">
+        Your book have been returned!
+    </div>
+</div>
+            }
+            @if (!string.IsNullOrEmpty(Model.SucessMessage))
+            {
+                <div class="alert alert-success error-message" role="alert">
+                    @Model.SucessMessage
+                </div>
+            }*@
 
 
 
@@ -37,9 +40,15 @@
 
 
 
+    
 
-    <h1 class="display-8">Your book have been returned</h1>
+        <div class="alert alert-primary" role="alert">
+            Your book have been returned!
+        </div>
+    
 
 
-</div>
+
+
+            </div>
             <!DOCTYPE html>

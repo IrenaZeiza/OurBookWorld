@@ -350,25 +350,77 @@ namespace OurBookWorld.UI.Controllers
             };
             BookViewModel bookModel5 = new BookViewModel()
             {
-                Id = 305,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Id = 306,
+                Name = "<<A Short History of Nearly Everything>>",
+                Author = "Bryson, Bill",
                 Type = "Science"
             };
             BookViewModel bookModel6 = new BookViewModel()
             {
-                Id = 305,
+                Id = 307,
                 Name = "<<A Brief History of Time>>",
                 Author = "Hawking, Stephen",
                 Type = "Science"
             };
-            BookViewModel bookModel4 = new BookViewModel()
+            BookViewModel bookModel7 = new BookViewModel()
             {
-                Id = 305,
+                Id = 308,
                 Name = "<<A Brief History of Time>>",
                 Author = "Hawking, Stephen",
                 Type = "Science"
             };
+            BookViewModel bookModel8 = new BookViewModel()
+            {
+                Id = 309,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel9 = new BookViewModel()
+            {
+                Id = 310,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel10 = new BookViewModel()
+            {
+                Id = 311,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel11 = new BookViewModel()
+            {
+                Id = 312,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel12 = new BookViewModel()
+            {
+                Id = 313,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel13 = new BookViewModel()
+            {
+                Id = 314,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+            BookViewModel bookModel14 = new BookViewModel()
+            {
+                Id = 315,
+                Name = "<<A Brief History of Time>>",
+                Author = "Hawking, Stephen",
+                Type = "Science"
+            };
+       
+            
+            
             BookList.Add(bookModel);
             BookList.Add(bookModel1);
             BookList.Add(bookModel2);
@@ -393,16 +445,29 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Return()
         {
-  
 
-               return View();
+           
+
+        //    if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        //    {
+        //        @Model.ErrorMessage
+
+
+        //    }
+        //    if (!string.IsNullOrEmpty(Model.SucessMessage))
+        //    {
+
+        //        @Model.SuccessMessage
+
+
+        //}
+
+            return View();
         }
 
-       
 
 
-
-        public IActionResult Index()
+            public IActionResult Index()
         {
             var book = new BookViewModel();
 
