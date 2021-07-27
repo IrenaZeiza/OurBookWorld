@@ -15,8 +15,7 @@ namespace OurBookWorld.UI.Controllers
 {
     public class BookLibController : Controller
     {
-        // GET: /<controller>/
-
+     
 
 
         public IActionResult Classics()
@@ -445,38 +444,17 @@ namespace OurBookWorld.UI.Controllers
 
         public IActionResult Return()
         {
-            ErrorViewModel error = new ErrorViewModel();
+        //    ErrorViewModel error = new ErrorViewModel();
 
 
-            error.SuccessMessage = "Your book has been returned!";
+        //    error.SuccessMessage = "Your book has been returned!";
 
-            return View(error);
+            return View();
 
 
 
           
-            //if (!string.IsNullOrEmpty(Model.Equals(succ)
-            //{
-            //    ErrorMessage = "Unable to find a card";
-            //    return View();
-            //}
-
-            ////            //}
-
-            //        @Model.ErrorMessage
-
-
-            //    }     //    if (!string.IsNullOrEmpty(Model.ErrorMessage))
-            //    {
-       
-            //    if (!string.IsNullOrEmpty(Model.SucessMessage))
-            //    {
-
-            //        @Model.SuccessMessage
-
-
-            //}
-
+         
        
 
         }
@@ -485,18 +463,18 @@ namespace OurBookWorld.UI.Controllers
 
             public IActionResult Index()
         {
-            var book = new BookViewModel();
+            //var book = new BookViewModel();
 
-            book.Author = "Tolstoy, Leo";
-            book.Name = "<<War And Peace>>";
-            book.Type = "Classic";
+            //book.Author = "Tolstoy, Leo";
+            //book.Name = "<<War And Peace>>";
+            //book.Type = "Classic";
 
-            using (var context = new OurBookWorldDBContext())
-            {
-                context.Add(book);
-                context.SaveChanges();
-                var books = context.Books.ToList();
-            }
+            //using (var context = new OurBookWorldDBContext())
+            //{
+            //    context.Add(book);
+            //    context.SaveChanges();
+            //    var books = context.Books.ToList();
+            //}
 
             return View();
         }

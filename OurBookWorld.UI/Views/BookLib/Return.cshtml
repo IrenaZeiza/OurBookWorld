@@ -19,25 +19,5 @@
     <br />
 </div>
 
-@if (!string.IsNullOrEmpty(Model.SuccessMessage))
-{
-
-    @Model.SuccessMessage
-}
 
 
-
-
-
-@{ @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                    {
-        <div class="alert alert-danger error-message" role="alert">
-            @Model.ErrorMessage
-            <div class="alert alert-primary" role="alert">
-                Your bookrequest.QueryString.HasValue  have been returned!
-            </div>
-        </div>*@ <!--<!--@if (!string.IsNullOrEmpty(Model.SuccessMessage))@Model.SuccessMessage }-->
-@*< !--@*<div class="alert alert-primary" role="alert">-->
-        Your book have been returned!
-    </div>*@
-}
