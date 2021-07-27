@@ -3,51 +3,33 @@
 @{
     ViewData["Title"] = "Return";
 }
-
+<!DOCTYPE html>
 <div class=“text-center”>
     <h1 class="display-4">Enter your book ID here</h1>
 
-    <input type="text" name="bookKeyword" />
+    <input name="BookId" type="text" />
     <br />
     <input type="submit" value="Return" />
     <br />
+</div>
 
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
 
+    @Model.SuccessMessage
+}
 
-    @{
+ 
 
-
-
-
-
-
-        @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-            {
-<div class="alert alert-danger error-message" role="alert">
-    @Model.ErrorMessage
-    <div class="alert alert-primary" role="alert">
+@{ @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+        <div class="alert alert-danger error-message" role="alert">
+            @Model.ErrorMessage
+            <div class="alert alert-primary" role="alert">
+                Your bookrequest.QueryString.HasValue  have been returned!
+            </div>
+        </div>*@ <!--<!--@if (!string.IsNullOrEmpty(Model.SuccessMessage))@Model.SuccessMessage }-->
+        @*< !--@*<div class="alert alert-primary" role="alert">-->
         Your book have been returned!
-    </div>
-</div>*@
-
-            @if (!string.IsNullOrEmpty(Model.SucessMessage))
-            {
-                
-                    @Model.SucessMessage
-                
-            }
-
-
-
-       
-        <div class="alert alert-primary" role="alert">
-            Your book have been returned!
-        </div>
-
-
-
-
-
-            
-            <!DOCTYPE html>
-        }
+    </div>*@
+}

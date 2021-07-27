@@ -8,13 +8,14 @@ namespace OurBookWorld.UI.Models
 
         public string ErrorMessage { get; set; }
 
-        public string SucessMessage { get; set; }
+        public string SuccessMessage { get; set; }
+
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
         public bool ShowErrorMessage => !string.IsNullOrEmpty(ErrorMessage);
 
-        public bool ShowSucessMessage => !string.IsNullOrEmpty(SucessMessage);
+        public bool ShowSuccessMessage => !string.IsNullOrEmpty(SuccessMessage);
 
     }
 }

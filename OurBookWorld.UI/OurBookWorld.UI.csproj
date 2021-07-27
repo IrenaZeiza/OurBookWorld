@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\net5.0\" />
-    <Folder Include="Views\ReturnBook\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\net5.0\OurBookLibraryDatabase.db" />

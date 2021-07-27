@@ -1,4 +1,4 @@
-﻿    using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OurBookWorld.UI.Context;
 using OurBookWorld.UI.Models;
 using System;
@@ -29,6 +29,7 @@ namespace OurBookWorld.UI.Controllers
                 context.Add(user);
                 context.SaveChanges();
                 var users = context.Users.ToList();
+               
             }
 
             return View();
@@ -47,6 +48,7 @@ namespace OurBookWorld.UI.Controllers
             {
                 context.Add(userContacts);
                 context.SaveChanges();
+                
 
                 UserContactsViewModel user = new UserContactsViewModel();
                 user = context.Users.FirstOrDefault();
@@ -54,5 +56,11 @@ namespace OurBookWorld.UI.Controllers
 
         }
 
+
+
+
+
     }
+
+     
 }

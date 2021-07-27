@@ -23,9 +23,6 @@ namespace OurBookWorld.UI.Controllers
         {
 
            
-
-
-            
             List<BookViewModel> BookList = new List<BookViewModel>();
 
             BookViewModel bookModel = new BookViewModel()
@@ -361,64 +358,64 @@ namespace OurBookWorld.UI.Controllers
             BookViewModel bookModel6 = new BookViewModel()
             {
                 Id = 307,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<Cosmos>>",
+                Author = "Sagan, Carl",
                 Type = "Science"
             };
             BookViewModel bookModel7 = new BookViewModel()
             {
                 Id = 308,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<The Selfish Gene>>",
+                Author = "Dawkins, Richard",
                 Type = "Science"
             };
             BookViewModel bookModel8 = new BookViewModel()
             {
                 Id = 309,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<The Principia>>",
+                Author = "Newton, Isaac",
                 Type = "Science"
             };
             BookViewModel bookModel9 = new BookViewModel()
             {
                 Id = 310,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<The Order of Time>",
+                Author = "Rovelli, Carlo",
                 Type = "Science"
             };
             BookViewModel bookModel10 = new BookViewModel()
             {
                 Id = 311,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<The Beginnings of Western Science>>",
+                Author = "Lindberg, David C.",
                 Type = "Science"
             };
             BookViewModel bookModel11 = new BookViewModel()
             {
                 Id = 312,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<The Double Helix>",
+                Author = "Watson, James D.",
                 Type = "Science"
             };
             BookViewModel bookModel12 = new BookViewModel()
             {
                 Id = 313,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<Infinite Powers: How Calculus Reveals the Secrets of the Universe>>",
+                Author = "Strogatz, Steven",
                 Type = "Science"
             };
             BookViewModel bookModel13 = new BookViewModel()
             {
                 Id = 314,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<Finding the Mother Tree: Discovering the Wisdom of the Forest>>",
+                Author = "Simard, Suzanne",
                 Type = "Science"
             };
             BookViewModel bookModel14 = new BookViewModel()
             {
                 Id = 315,
-                Name = "<<A Brief History of Time>>",
-                Author = "Hawking, Stephen",
+                Name = "<<Europe: A History>>",
+                Author = "Davies, Norman",
                 Type = "Science"
             };
        
@@ -450,9 +447,38 @@ namespace OurBookWorld.UI.Controllers
         {
             ErrorViewModel error = new ErrorViewModel();
 
-            error.SucessMessage = "You book has been returned!";
+
+            error.SuccessMessage = "Your book has been returned!";
 
             return View(error);
+
+
+
+          
+            //if (!string.IsNullOrEmpty(Model.Equals(succ)
+            //{
+            //    ErrorMessage = "Unable to find a card";
+            //    return View();
+            //}
+
+            ////            //}
+
+            //        @Model.ErrorMessage
+
+
+            //    }     //    if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            //    {
+       
+            //    if (!string.IsNullOrEmpty(Model.SucessMessage))
+            //    {
+
+            //        @Model.SuccessMessage
+
+
+            //}
+
+       
+
         }
 
 
@@ -475,29 +501,7 @@ namespace OurBookWorld.UI.Controllers
             return View();
         }
 
-        //public List<BookViewModel> Books { get; set; }
-
-        //public void Connect()
-        //{
-        //    var book = new BookViewModel();
-
-        //    string cs = "Data Source=" + Environment.CurrentDirectory + "\\.db";
-        //    using (var connection = new SQLiteConnection(cs))
-        //    {
-        //        var listOfMovies = new List<BookViewModel>();
-        //        var stm = "SELECT * from Books";
-        //        var command = new SQLiteCommand(stm, connection);
-               
-        
-        //            var reader = command.ExecuteReader();
-        //            while (reader.Read())
-        //            {
-        //                using (var context = new OurBookWorldDBContext())
-        //                {
-        //                    context.Add(book);
-        //                    context.SaveChanges();
-        //                    var books = context.Books.ToList();
-        //                }
+     
 
 
 
