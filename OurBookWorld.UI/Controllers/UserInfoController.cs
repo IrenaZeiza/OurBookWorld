@@ -12,7 +12,7 @@ namespace OurBookWorld.UI.Controllers
     {
         public IActionResult UserContacts()
         {
-            
+
 
             var user = new UserContactsViewModel();
 
@@ -29,13 +29,13 @@ namespace OurBookWorld.UI.Controllers
                 context.Add(user);
                 context.SaveChanges();
                 var users = context.Users.ToList();
-               
+
             }
 
             return View();
         }
         [HttpPost]
-        public void SaveUserDetails( int UserNumber, string Name, string Surname, string Email)
+        public void SaveUserDetails(int UserNumber, string Name, string Surname, string Email)
         {
             UserContactsViewModel userContacts = new UserContactsViewModel();
 
@@ -48,19 +48,39 @@ namespace OurBookWorld.UI.Controllers
             {
                 context.Add(userContacts);
                 context.SaveChanges();
-                
+
 
                 UserContactsViewModel user = new UserContactsViewModel();
                 user = context.Users.FirstOrDefault();
+
             }
+
+            RedirectToAction("Redirect");
+
+
+
 
         }
 
+        public IActionResult Redirect()
 
-
-
-
+        {
+            return RedirectToAction("Index", "BookLib");
+        }
     }
+}
+
+
+
+
+        
+    
+
+
+
+
+
+    
 
      
-}
+

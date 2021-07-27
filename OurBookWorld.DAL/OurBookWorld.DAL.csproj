@@ -7,10 +7,17 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+    <PackageReference Include="MsBuild.NuGet.Pack" Version="2.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OurBookWorld.Entity\OurBookWorld.Entity.csproj" />
     <ProjectReference Include="..\OurBookWorld.UI\OurBookWorld.UI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MsBuild.NuGet.Pack" />
   </ItemGroup>
 </Project>

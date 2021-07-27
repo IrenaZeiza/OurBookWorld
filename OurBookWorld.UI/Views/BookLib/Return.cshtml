@@ -3,13 +3,19 @@
 @{
     ViewData["Title"] = "Return";
 }
+<script>
+    function success()
+    {
+        alert("Your book has been returned");
+    }
+</script>
 <!DOCTYPE html>
 <div class=“text-center”>
     <h1 class="display-4">Enter your book ID here</h1>
 
     <input name="BookId" type="text" />
     <br />
-    <input type="submit" value="Return" />
+    <input onclick ="success()" type="submit" value="Return" />
     <br />
 </div>
 
@@ -19,7 +25,9 @@
     @Model.SuccessMessage
 }
 
- 
+
+
+
 
 @{ @*@if (!string.IsNullOrEmpty(Model.ErrorMessage))
                     {
@@ -29,7 +37,7 @@
                 Your bookrequest.QueryString.HasValue  have been returned!
             </div>
         </div>*@ <!--<!--@if (!string.IsNullOrEmpty(Model.SuccessMessage))@Model.SuccessMessage }-->
-        @*< !--@*<div class="alert alert-primary" role="alert">-->
+@*< !--@*<div class="alert alert-primary" role="alert">-->
         Your book have been returned!
     </div>*@
 }
