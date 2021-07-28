@@ -1,22 +1,24 @@
 ﻿@model ErrorViewModel
 
 @{
-    ViewData["Title"] = "Return";
+	ViewData["Title"] = "Return";
 }
 <script>
-    function success()
-    {
-        alert("Your book has been returned");
-    }
+ function success()
+ {
+  alert("Your book has been returned");
+ }
 </script>
 <!DOCTYPE html>
 <div class=“text-center”>
-    <h1 class="display-4">Enter your book ID here</h1>
-
-    <input name="BookId" type="text" />
-    <br />
-    <input onclick ="success()" type="submit" value="Return" />
-    <br />
+ <h1 class="display-4">Enter your book ID here</h1>
+	@using (Html.BeginForm("Index", "BookLib", FormMethod.Post))
+	{
+		 <input name="BookId" type="text" />
+		 <br />
+		 <input onclick="success()" type="submit" value="Return" />
+		 <br />
+	}
 </div>
 
 
